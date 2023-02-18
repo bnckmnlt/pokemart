@@ -5,6 +5,8 @@ import Products from './scenes/products';
 import Services from './scenes/services';
 import Pokemon from './scenes/pokemon';
 import Abilities from './scenes/abilities';
+import PokemonDetails from './scenes/pokemondetails';
+import ItemDetails from './scenes/itemdetails';
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
             <Route path='/services' element={<Services />} />
             <Route path='/pokemon' element={<Pokemon />} />
             <Route path='/abilities' element={<Abilities />} />
+            <Route path='/pokemon/:id' element={<PokemonDetails />} />
+            <Route path='/item/:id' element={<ItemDetails />} />
           </Route>
         </Routes>
       </Router>

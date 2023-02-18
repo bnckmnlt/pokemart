@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Outlet, useLocation } from 'react-router-dom';
+import { Outlet, useLocation, useParams } from 'react-router-dom';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import {
   ChevronRightIcon,
@@ -15,6 +15,7 @@ import Pokedex from 'pokedex-promise-v2';
 
 const StoreLayout = () => {
   const location = useLocation();
+  const { id } = useParams();
   const [itemSize, setItemSize] = useState(44);
   const [shapeList, setShapeList] = useState([]);
   const [showTopBtn, setShowTopBtn] = useState(false);
@@ -167,7 +168,7 @@ const StoreLayout = () => {
             </div>
           ) : (
             <div className='w-full'>
-              <Outlet context={[data, increaseSize, isLoaded]} />
+              <Outlet context={{ data, increaseSize, isLoaded, id }} />
             </div>
           )}
           {showTopBtn && isLoaded && (
