@@ -1,0 +1,28 @@
+@import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900);
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root,
+.app {
+  height: 100%;
+  width: 100%;
+  font-family: 'Inter', 'sanf-serif';
+}
+
+@layer components {
+  .btn-navbar {
+    @apply block transform rounded py-2 pl-3 pr-4 text-gray-700 transition-colors delay-75 duration-150 hover:bg-gray-100 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:p-0 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:bg-transparent md:dark:hover:text-white;
+  }
+
+  .btn-navbar-active {
+    @apply block transform rounded bg-cyan-600 py-2 pl-3 pr-4 text-white transition-colors delay-75 duration-150 dark:text-white md:bg-transparent md:p-0 md:text-blue-700;
+  }
+
+  .gradient-text-modern {
+    @apply bg-gradient-to-r from-[#0014FF] via-[#009EFF] to-[#3B3486] bg-clip-text text-transparent drop-shadow-md;
+  }
+}
