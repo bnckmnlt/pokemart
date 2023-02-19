@@ -2,7 +2,7 @@ import { useOutletContext, Link } from 'react-router-dom';
 import { CircleStackIcon } from '@heroicons/react/24/outline';
 
 const Products = () => {
-  const { data, increaseSize, isLoaded } = useOutletContext();
+  const { data, increaseSize, isLoaded, splitString } = useOutletContext();
 
   return (
     <div className='grid w-full grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4'>
@@ -61,12 +61,5 @@ const Products = () => {
     </div>
   );
 };
-
-function splitString(string) {
-  const stringArray = string.split('-');
-  return `${stringArray[0].charAt(0).toUpperCase() + stringArray[0].slice(1)} ${
-    stringArray[1].charAt(0).toUpperCase() + stringArray[1].slice(1)
-  }`;
-}
 
 export default Products;

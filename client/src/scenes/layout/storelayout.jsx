@@ -169,7 +169,14 @@ const StoreLayout = () => {
           ) : (
             <div className='w-full'>
               <Outlet
-                context={{ data, increaseSize, isLoaded, id, location }}
+                context={{
+                  data,
+                  increaseSize,
+                  isLoaded,
+                  id,
+                  location,
+                  splitString,
+                }}
               />
             </div>
           )}
@@ -195,5 +202,12 @@ const interval = {
   limit: 50,
   offset: 0,
 };
+
+function splitString(string) {
+  const stringArray = string.split('-');
+  return `${stringArray[0].charAt(0).toUpperCase() + stringArray[0].slice(1)} ${
+    stringArray[1].charAt(0).toUpperCase() + stringArray[1].slice(1)
+  }`;
+}
 
 export default StoreLayout;
