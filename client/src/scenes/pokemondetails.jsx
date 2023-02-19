@@ -153,13 +153,12 @@ const PokemonDetails = () => {
                 monitor/screen settings.
               </p>
               <p className='text-[15px] leading-6 md:text-base'>
-                <span className='font-semibold'>Note: </span>Please be informed
-                that we cannot allow product exchanges due to the customer's
-                personal preference in choosing types. The type chart displayed
-                on each product and type chart section are for your reference.
-                Unless the product is defective and does not follow the type
-                chart as displayed on our official website, we cannot
-                accommodate this.
+                <span className='font-semibold'>Note: </span>Kindly note that we
+                are unable to accept product exchanges for type based issues on
+                personal preference. A type chart is provided before making your
+                purchase. We can only accommodate exchanges if the product is
+                defective and does not match the size chart. Thank you for your
+                understanding.
               </p>
               <div className='pb-2'>
                 <p className='text-[13px] font-semibold'>Type:</p>
