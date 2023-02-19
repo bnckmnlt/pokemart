@@ -4,8 +4,6 @@ import { CircleStackIcon } from '@heroicons/react/24/outline';
 const Products = () => {
   const { data, increaseSize, isLoaded } = useOutletContext();
 
-  console.log('rendering...');
-
   return (
     <div className='grid w-full grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4'>
       {isLoaded &&

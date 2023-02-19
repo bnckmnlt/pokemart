@@ -168,7 +168,9 @@ const StoreLayout = () => {
             </div>
           ) : (
             <div className='w-full'>
-              <Outlet context={{ data, increaseSize, isLoaded, id }} />
+              <Outlet
+                context={{ data, increaseSize, isLoaded, id, location }}
+              />
             </div>
           )}
           {showTopBtn && isLoaded && (

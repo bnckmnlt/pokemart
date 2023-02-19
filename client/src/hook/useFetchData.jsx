@@ -48,12 +48,8 @@ const useFetchData = (url) => {
                 price: pokemonRes.types[1]
                   ? `${Math.trunc(Math.random() * (20 - 15) + 15)}99`
                   : `${Math.trunc(Math.random() * (14 - 10) + 10)}99`,
-                type: pokemonRes.types[1]
-                  ? [
-                      pokemonRes.types[0].type.name,
-                      pokemonRes.types[1].type.name,
-                    ]
-                  : [pokemonRes.types[0].type.name],
+                type: pokemonRes.types,
+                genus: shapeRes.genera[7].genus,
               };
             }
             return {

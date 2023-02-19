@@ -187,7 +187,7 @@ const Footer = () => {
           </div>
           <div className='mt-8 flex items-center justify-center space-x-4 text-sm sm:mt-6 md:justify-start md:text-base'>
             <p className='font-medium tracking-tight text-gray-600 dark:text-slate-200'>
-              Copyright &copy; Bnckmnlt est. 2023
+              &copy; Pokémon Mart. Powered by Electricity
             </p>{' '}
             <span className='text-xl text-gray-600 dark:text-slate-200 sm:text-base'>
               |

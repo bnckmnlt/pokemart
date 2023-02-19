@@ -4,13 +4,11 @@ import { CircleStackIcon } from '@heroicons/react/24/outline';
 const Pokemon = () => {
   const { data, increaseSize, isLoaded } = useOutletContext();
 
-  console.log('rendering...');
-
   return (
     <div>
       {isLoaded && (
         <div className='grid w-full grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4'>
-          {data.map(({ names, sprite, id, price, type }) => (
+          {data.map(({ names, sprite, id, price, genus }) => (
             <div
               key={id}
               className='container rounded-md border-gray-300 p-4 hover:border'>
@@ -36,15 +34,9 @@ const Pokemon = () => {
                   <p className='text-sm font-semibold text-gray-700'>
                     {names.charAt(0).toUpperCase() + names.slice(1)}
                   </p>
-                  {type && (
+                  {genus && (
                     <p className='text-xs font-medium tracking-tight text-gray-500'>
-                      {`${type[0].charAt(0).toUpperCase() + type[0].slice(1)}${
-                        type[1]
-                          ? ` / ${
-                              type[1].charAt(0).toUpperCase() + type[1].slice(1)
-                            }`
-                          : ''
-                      }`}
+                      {genus}
                     </p>
                   )}
                 </div>

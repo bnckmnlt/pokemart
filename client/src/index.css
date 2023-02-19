@@ -25,4 +25,8 @@ body,
   .gradient-text-modern {
     @apply bg-gradient-to-r from-[#0014FF] via-[#009EFF] to-[#3B3486] bg-clip-text text-transparent drop-shadow-md;
   }
+
+  .gradient-text-orange {
+    @apply bg-gradient-to-r from-yellow-400 via-yellow-600 to-orange-700 bg-clip-text text-transparent drop-shadow-md;
+  }
 }
